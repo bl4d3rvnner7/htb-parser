@@ -1,42 +1,53 @@
 # 🖥️ HTB Module Parser
 
-**Convert any unlocked HackTheBox Academy module into a complete offline HTML package** — including images, assets, code highlighting, TOC sidebar, and dark mode. ⚙️📘
+**Convert any unlocked HackTheBox Academy module into a full offline HTML package** - including images, assets, syntax highlighting, and a TOC sidebar. ⚙️📘
 
-## 📦 Project Structure
+This tool was tested on **50+ modules** without errors. Perfect for offline studying or archiving.
 
-```
-/
-├── generate_offline.py
-├── resources/
-│   ├── Tutorial Vid.mp4
-│   └── cookie_tut.png
-└── README.md
-```
+## 🎬 Tutorial & Cookie Guide (Resources)
 
-## 🎬 Resources (Tutorial & Cookie Guide)
+* ▶️ **Video Tutorial**
+  [Tutorial Vid.mp4](https://github.com/user-attachments/assets/3dfe5baa-699f-43a4-892d-8ba188fed893)
 
-* **Tutorial Vid.mp4** — A full video walkthrough explaining how to use the script.
-* **cookie_tut.png** — Screenshot showing how to extract your HTB session cookie from the browser.
+* 🍪 **How to get your Cookie (Screenshot)**
+  ![Cookie Tutorial](resources/cookie_tut.png)
 
-You can find both files in the `resources` folder.
+Both files are located in the **`resources/`** folder of the repository.
 
-## ⚙️ Usage
+---
 
-### 1️⃣ Install dependencies
+## ⚙️ How to Set Up & Use (Step-by-Step)
+
+### 1️⃣ Install Requirements
+
+Install the Python packages needed by the script:
 
 ```bash
 pip install requests beautifulsoup4 markdown pygments
 ```
 
-### 2️⃣ Get your HTB cookie
+### 2️⃣ Get Your HTB Session Cookie
 
-1. Log into academy.hackthebox.com
-2. Open *Developer Tools → Network*
-3. Click any module request
-4. Copy the **Cookie** header (see `resources/cookie_tut.png`)
-5. Save it to `cookie.txt`
+You must be **logged in** to academy.hackthebox.com to download module content.
 
-### 3️⃣ Run the module parser
+Follow this mini-guide:
+
+1. Open **Developer Tools** (F12)
+2. Go to the **Network** tab
+3. Click any request from `academy.hackthebox.com`
+4. Find the **Request Headers**
+5. Copy the **Cookie** field
+6. Paste it into `cookie.txt`
+
+✔ Refer to the screenshot here:
+![Cookie Tutorial](resources/cookie_tut.png)
+
+✔ Or watch the video tutorial here:
+[▶️ Tutorial Vid.mp4](resources/Tutorial%20Vid.mp4)
+
+### 3️⃣ Run the Offline Module Generator
+
+Basic usage:
 
 ```bash
 python generate_offline.py --module <MODULE_ID>
@@ -48,31 +59,48 @@ Example:
 python generate_offline.py --module 278
 ```
 
-Optional: supply cookie inline
+You can also provide your cookie manually:
 
 ```bash
 python generate_offline.py --module 278 --cookie "auth_sid=..."
 ```
 
-## 📁 Output
+### 4️⃣ Where to Get the Module ID?
 
-The script generates a folder:
+Check the module URL:
 
 ```
-<MODULE_ID>. <Module Name>/
-   ├── index.html
-   ├── style.css
-   ├── pygments.css
-   └── assets/
-        ├── 0.html
-        ├── 1.html
-        ├── image.png
-        └── ...
+https://academy.hackthebox.com/beta/module/278
 ```
 
-Complete offline access with navigation & styling.
+➡️ The number **278** is the module ID.
 
-## 🤝 Contribute
+### 5️⃣ Output Structure
 
-Pull requests are welcome. Feel free to improve parsing, layout, or compatibility with future HTB versions.
+After parsing, you will get a folder like:
 
+```
+278. Web Requests/
+│── index.html
+│── style.css
+│── pygments.css
+└── assets/
+      ├── 0.html
+      ├── 1.html
+      ├── 2.html
+      ├── image1.png
+      └── ...
+```
+
+Open:
+
+```
+index.html
+```
+
+Your module is now **100% offline** and fully navigable.
+
+## 🤝 Contributing
+
+Pull requests are welcome.
+Feel free to expand compatibility, add new features, improve UI, or help optimize parsing.
