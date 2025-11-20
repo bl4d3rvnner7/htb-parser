@@ -1,3 +1,17 @@
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=blue)
+![Code Style: Black](https://img.shields.io/badge/Code%20Style-Black-black?style=for-the-badge)
+![Dependencies](https://img.shields.io/badge/Dependencies-bs4%20%7C%20requests%20%7C%20markdown%20%7C%20pygments-blue?style=for-the-badge)
+![HTB](https://img.shields.io/badge/HTB-Academy-9fef00?style=for-the-badge&logo=hackthebox&logoColor=white)
+![HTML Output](https://img.shields.io/badge/Output-HTML-orange?style=for-the-badge)
+![Tested](https://img.shields.io/badge/Tested-50%2B%20Modules-brightgreen?style=for-the-badge)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blueviolet?style=for-the-badge)
+
+![GitHub Stars](https://img.shields.io/github/stars/bl4d3rvnner7/htb-parser?style=for-the-badge)
+![GitHub Forks](https://img.shields.io/github/forks/bl4d3rvnner7/htb-parser?style=for-the-badge)
+![GitHub Issues](https://img.shields.io/github/issues/bl4d3rvnner7/htb-parser?style=for-the-badge)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/bl4d3rvnner7/htb-parser?style=for-the-badge)
+
+
 # 🖥️ HTB Module Parser
 
 **Convert any unlocked HackTheBox Academy module into a full offline HTML package** - including images, assets, syntax highlighting, and a TOC sidebar. ⚙️📘
@@ -104,3 +118,8 @@ Your module is now **100% offline** and fully navigable.
 
 Pull requests are welcome.
 Feel free to expand compatibility, add new features, improve UI, or help optimize parsing.
+
+[![Telegram](https://img.shields.io/badge/Telegram-@scarlettaowner-0088cc?logo=telegram&logoColor=white)](https://t.me/scarlettaowner)
+[![Telegram Channel](https://img.shields.io/endpoint?url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fviperzcrew2)](https://t.me/viperzcrew2)
+
+
